@@ -12,7 +12,7 @@ public class Conexao {
 
 	private static DataSource dataSource;
 
-	Conexao() throws PropertyVetoException, SQLException {
+	public Conexao() throws PropertyVetoException, SQLException {
 		// Criando um Pool de Conexões utilizando as libs do C3PO,
 		// podendo assim limitar a quantidade de conexões simultâneas
 		ComboPooledDataSource cpds = new ComboPooledDataSource();
@@ -24,7 +24,7 @@ public class Conexao {
 		cpds.setAcquireIncrement(5);
 		cpds.setMaxPoolSize(20);
 		cpds.setMaxStatements(180);
-		this.dataSource = cpds;
+		Conexao.dataSource = cpds;
 	}
 
 	public Connection getConnection() throws SQLException {

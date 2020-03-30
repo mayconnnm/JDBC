@@ -1,6 +1,6 @@
 package br.com.alura;
 
-import java.beans.PropertyVetoException;
+import java.beans.PropertyVetoException; 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -31,10 +31,10 @@ public class TestaInsercao {
 				// System.out.println(id);
 				// }
 
-				ps.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 				// Volta a atrás de todas as modificações
+				System.out.println("RollBack executado");
 				connection.rollback();
 			}
 		}

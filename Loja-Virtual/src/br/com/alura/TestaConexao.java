@@ -1,6 +1,6 @@
 package br.com.alura;
 
-import java.beans.PropertyVetoException;
+import java.beans.PropertyVetoException; 
 import java.sql.Connection;
 import java.sql.SQLException;
 
